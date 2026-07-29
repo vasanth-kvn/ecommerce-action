@@ -9,6 +9,6 @@ jobs:
       - name: config aws cli
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} }}
-          WS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ variables.AWS_ACCESS_KEY_ID}}
+          aws-secrets-access-key-id: ${{ variables.AWS_SECRET_ACCESS_KEY}}
           aws-region: us-east-1
