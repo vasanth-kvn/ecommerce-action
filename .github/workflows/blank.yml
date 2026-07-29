@@ -20,6 +20,6 @@ jobs:
         run: aws s3 ls
       - name: sync s3
         run: |
-          aws s3 sync ecomm-2.1/IMG s3://github-action-my/ \
+          aws s3 sync ecomm-2.1/img s3://github-action-my/ \
           --exclude "*" \
           --include "index.html"
