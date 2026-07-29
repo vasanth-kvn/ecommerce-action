@@ -1,0 +1,14 @@
+name: stastic web to s3
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: send to s3
+        uses: actions/checkout@v4
+      - name: config aws cli
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} }}
+          aws-secret-access-key-id: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
