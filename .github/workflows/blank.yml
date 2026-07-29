@@ -16,4 +16,8 @@ jobs:
         run: |
           ls
           aws sts get-caller-identity
-        
+      - name: sync s3
+        run: |
+          aws s3 sync ./ s3://testbucket-496305/ \
+          --exclude "*" \
+          --include "index.html"
