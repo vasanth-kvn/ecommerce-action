@@ -16,6 +16,8 @@ jobs:
         run: |
           ls
           aws sts get-caller-identity
+      - name: List Available Buckets
+        run: aws s3 ls
       - name: sync s3
         run: |
           aws s3 sync ./ s3://github-action-my-496305/ \
