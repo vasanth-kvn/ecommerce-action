@@ -18,6 +18,6 @@ jobs:
           aws sts get-caller-identity
       - name: sync s3
         run: |
-          aws s3 sync ./ s3://github-action-my-496305/ \
+         aws s3 sync ./ s3://github-action-my-496305/ \
           --exclude "*" \
           --include "index.html"
