@@ -20,4 +20,4 @@ jobs:
         run: aws s3 ls
       - name: sync s3
         run: |
-          aws s3 sync ecomm-2.1/ s3://github-action-my/
+          aws s3 sync ecomm-2.1/ s3://askjyfgui/
